@@ -1,0 +1,202 @@
+<html>
+    <head>
+        <style>
+        body {
+            margin: 0px;
+        }
+        .header {
+          width: 100%;
+          height: 260px;
+          background-color: #293f51;
+        }
+        .title-menu-top,
+        .title-menu-bottom {
+          display: flex;
+          justify-content: space-around;
+        }
+        .title-top {
+          border-top: 3px solid #648880;
+          padding-top: 18px;
+          font-size: 24px;
+          color: #c7cdd1;
+          font-family: serif;
+        }
+        .menu-top {
+          padding-top: 28px;
+          color:#ffffff;
+          cursor: pointer;
+          display: flex;
+        }
+        .link{
+            margin-right: 10px;
+        }
+        .title-bottom {
+          font-size: 24px;
+          color: #c7cdd1;
+          padding-left: 22px;
+          font-family: serif;
+        }
+        .menu-bottom {
+          color: #ffffff;
+          font-size: 12px;
+          padding-top: 4px;
+          margin-left: 60px;
+        }
+        .menu-item {
+          padding-right: 8px;
+        }
+        .main-title {
+          text-align: center;
+          padding-top: 24px;
+        }
+       .title1 {
+          color: #5d807b;
+          font-size: 22px;
+        }
+        .title2 {
+          color: #ffff;
+          font-size: 18px;
+          padding-top: 8px;
+        }
+        .title2-bottom{
+          padding-top: 8px;   
+        }
+        .cards {
+          display: flex;
+          justify-content: center;
+          margin-top: 45px;
+          margin-bottom: 24px;
+        }
+        .individual-card{
+          width: 200px;
+          margin-right: 16px;
+        }
+        .card-title{
+          color: #9e9e9e;
+          font-size: 14px;
+          margin-bottom: 14px;
+        }
+        .image1{
+          background-image: url("https://cms-assets.tutsplus.com/uploads/users/34/posts/26194/preview_image/javascript.png");
+        }
+        .image2{
+          background-image: url("https://news-cdn.softpedia.com/images/news2/node-js-7-x-and-other-javascript-news-508045-3.png");
+        }
+        .image3{
+          background-image: url("https://miro.medium.com/max/1040/1*0lgunvVYa8gZ_sfMHflyvw.jpeg");
+        }
+        .card-profile {
+          width: 100%;
+          height: 110px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          border-radius: 4px;
+        }
+        .card-name{
+          color:#527372;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        .card-description{
+          color: #9e9e9e;
+          font-size: 12px;
+        }
+        .footer{
+          width: 100%;
+          height: 80px;
+          background-color: #293f51;
+          bottom: 0px;
+          position: sticky;
+          display: flex;
+          justify-content: space-evenly;
+        }
+        .copy-rights{
+          color: #5d807b;
+          margin-top: 28px;
+        }
+        .footer-links{
+          color:#ffffff;
+          margin-top: 28px;
+        }
+        .links{
+          margin-right: 12px;
+          font-size: 12px;
+        }
+        .button{
+          cursor: pointer;
+          border: 2px solid;
+          color: #527372;
+          font-weight: 600;
+          width: 80px;
+          height: 40px;
+          font-size: 16px;
+          border-radius: 16px;
+          margin-right: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+    </head>
+<body>
+    <div  class="main-container">
+        <div class="header">
+            <div class="title-menu-top">
+                <div class="title-top">MongoDb</div>
+                <div class="menu-top">
+                    <div class="link">Js</div>
+                    <div class="link">Node</div>
+                    <div class="link">MongoDb</div>
+                </div>
+            </div>
+            <div class="title-menu-bottom">
+                <div class="title-bottom">Node</div>
+                <div class="menu-bottom" id="user-exists">
+                        <span><button class="button"><a href="/loginUser">Login</a></button></span>
+                        <span><button class="button"><a href = "/register">Sign Up</a></button></span>
+                </div>
+            </div>
+            <div class="main-title">
+                <div class="title1">MongoDB Atlas and Node</div>
+                <div class="title2">Always on and durable and Secure from the start and Fully automated and elastic</div>
+                <div class="title2">Node.js is an open-source, cross-platform, back-end, JavaScript runtime environment that executes JavaScript code outside a web browser</div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="individual-card">
+                <div class="card-title">JavaScript</div>
+                <div class="card-profile image1"></div>
+                <div class="card-name">Js Pros</div>
+                <div class="card-description">Speed. Client-side very fast,Simplicity,
+                    Interoperability. JavaScript plays nicely with other languages.
+                </div>
+            </div>
+            <div class="individual-card">
+                <div class="card-title">Node</div>
+                <div class="card-profile image2"></div>
+                <div class="card-name">Node Pros</div>
+                <div class="card-description">Node.js offers an Easy Scalability,Easy to Learn,
+                    Node.js used as Single Programming Language,Benefit of Fullstack JS
+                </div>
+            </div>
+            <div class="individual-card">
+                <div class="card-title">MongoDB</div>
+                <div class="card-profile image3"></div>
+                <div class="card-name">Mongo Pros</div>
+                <div class="card-description">Schema less,Ease of ScaleOut, Structure of single Object,
+                    MongoDB in which collection holds different documents,No complaex Joins.
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="copy-rights">&copy; Web Technologies DataScience Automation</div>
+            <div class="footer-links">
+                <span class="links">WebTechnologies</span>
+                <span class="links">DataScience</span>
+                <span class="links">Automation</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

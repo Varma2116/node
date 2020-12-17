@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        form {
+            display: flex;
+            justify-content: center;
+        }
+
+        fieldset {
+            background-color: #293f51;
+            width: 600px;
+            color: #ffffff;
+        }
+
+        legend {
+            background-color: gray;
+            color: white;
+        }
+
+        .details {
+            margin-top: 20px;
+            padding-left: 30px;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px 0 16px 0;
+        }
+
+        .button {
+            cursor: pointer;
+            border: 2px solid;
+            color: #ffffff;
+            font-weight: 600;
+            width: 80px;
+            height: 40px;
+            background-color: gray;
+            font-size: 16px;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="login(event)" method="POST" id="form">
+        <fieldset>
+            <legend>Login Form</legend>
+            <div class="details">
+                <label>Enter Phone Number:</label>
+                <input type="number" name="phoneNumber" placeholder="Enter your phoneNumber" required>
+            </div>
+            <div class="details">
+                <label>Enter password :</label>
+                <input type="password" name="password" placeholder="Enter password" required >
+            </div>
+            <div class="details">
+                <button type = "submit" class="button">Login</button>
+                <button class="button"><a href="/register">Sign Up</a></button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+<script>
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    function login(event){
+        event.preventDefault();
+        var form = document.getElementById("form");
+        params = {
+            "phoneNumber": form.elements['phoneNumber'].value,
+            "password": form.elements['password'].value
+        }
+        fetch('/login', {
+            method: 'post',
+            body: JSON.stringify(params),
+            headers: {
+                'content-type': 'application/json',
+            }
+        }).then(response => {
+            window.location.href = "/welcome";
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
+</script>
+</html>
